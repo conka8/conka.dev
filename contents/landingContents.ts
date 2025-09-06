@@ -100,14 +100,6 @@ export type LandingContents = Record<SupportedLanguages, {
             {
                 type: string,
                 contact: string
-            },
-            {
-                type: string,
-                contact: string
-            },
-            {
-                type: string,
-                contact: string
             }
         ],
         "hand-image-src": string
@@ -177,10 +169,10 @@ export const landingContents: LandingContents = {
                     projectLink: "https://www.catico.io/"
                 },
                 {
-                    caption: "Todo calendar web app",
-                    videoSrc: "/assets/projectThumbnail/todo.jpg",
-                    languages: ["Next.js", "TypeScript", "Tailwind CSS", "Prisma", "PostgreSQL"],
-                    projectLink: "https://todo.meisken.dev/"
+                    caption: "BotB",
+                    videoSrc: "/assets/projectThumbnail/project4.png",
+                    languages: ["Fullstack", "Ecommerce"],
+                    projectLink: "https://www.botb.com/"
                 },
                 {
                     caption: "chinese text converter",
@@ -218,16 +210,7 @@ export const landingContents: LandingContents = {
                 {
                     type: "email",
                     contact: "jonas.keller122@gmail.com"
-                },
-                {
-                    type: "whatsapp",
-                    contact: "+852 92053876"
-                },
-                {
-                    type: "upwork",
-                    contact: "Jonas Keller"
-                }
-            ],
+                }],
             "hand-image-src": "/assets/hand.PNG"
         },
         "lets-talk-button": {
@@ -335,14 +318,6 @@ export const landingContents: LandingContents = {
                 {
                     type: "email",
                     contact: "jonas.keller122@gmail.com"
-                },
-                {
-                    type: "whatsapp",
-                    contact: "+852 92053876"
-                },
-                {
-                    type: "upwork",
-                    contact: "Jonas Keller"
                 }
             ],
             "hand-image-src": "/assets/hand.PNG"

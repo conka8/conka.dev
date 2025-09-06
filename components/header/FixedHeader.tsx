@@ -50,7 +50,6 @@ const FixedHeader: FC = () => {
                     <div 
                         className='flex items-center gap-6 pointer-events-auto'
                     >
-                        <LanguageToggle />
                         <HamburgerMenu active={navMenuActive} onClick={() => { SetNavMenuActive(old => !old) }} />
                     </div>
                     <NavMenu navMenuActive={navMenuActive} SetNavMenuActive={SetNavMenuActive} />
