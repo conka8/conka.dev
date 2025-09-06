@@ -215,7 +215,7 @@ export const landingContents: LandingContents = {
         },
         "lets-talk-button": {
             name: "Let’s Talk",
-            link: "https://www.upwork.com/freelancers/~01698d1c0db877b32d"
+            link: "https://t.me/conka391"
         }
     },
 
@@ -324,7 +324,7 @@ export const landingContents: LandingContents = {
         },
         "lets-talk-button": {
             name: "Let’s Talk",
-            link: "https://www.upwork.com/freelancers/~01698d1c0db877b32d"
+            link: "https://t.me/conka391"
         }
     }
 } as const
