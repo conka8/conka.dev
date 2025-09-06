@@ -192,7 +192,7 @@ const BlankLoadingContextProvider: FC<Props> = ({children}) => {
                                 }
                             }}
                         >
-                            <HeadingEighthXl>meisken.dev</HeadingEighthXl>
+                            <HeadingEighthXl>Jonas Keller</HeadingEighthXl>
                         </motion.div>
                     )
                 }
