@@ -1,48 +1,45 @@
-import { FC } from 'react'
-import HeadingThirdXl from '../headings/HeadingThirdXl';
-import ParagraphBase from '../paragraphs/ParagraphBase';
-import Image from 'next/image';
-import Arrow from '../svg/Arrow';
-import Link from 'next/link';
+import { FC } from "react";
+import HeadingThirdXl from "../headings/HeadingThirdXl";
+import Image from "next/image";
+import Arrow from "../svg/Arrow";
+import Link from "next/link";
 
-interface Props{
-    index?: string,
-    description?: string,
-    mediaSrc?: string,
-    mediaType?: "image" | "video",
-    projectLink: string
+interface Props {
+  index?: string;
+  languages?: string[];
+  mediaSrc?: string;
+  mediaType?: "image" | "video";
+  projectLink: string;
 }
 
-const ProjectCard: FC<Props> = ({description,index,mediaSrc="",mediaType,projectLink}) => {
-    return (
-        <Link 
-            className='flex flex-col text-black w-full relative @container/project-card cursor-pointer'
-            href={projectLink}
-        >
-            <div className=' w-full relative h-[calc(405/720*100cqw)]'>
-                {
-                    mediaSrc === "" ? (<></>) : (
-                        mediaType === "image" ? (
-                            <Image 
-                                src={mediaSrc}
-                                alt={mediaSrc}
-                                fill
-                                className='object-cover'
-                            />
-                        ) : (
-                            <video 
-                                muted
-                                playsInline
-                                src={mediaSrc}
-                                
-                                className='w-full h-full object-cover'
-                            />
-                        )
-                    )
-                }
-            </div>
-            <div 
-                className='
+const ProjectCard: FC<Props> = ({
+  languages,
+  index,
+  mediaSrc = "",
+  mediaType,
+  projectLink,
+}) => {
+  return (
+    <Link
+      className="flex flex-col text-black w-full relative @container/project-card cursor-pointer"
+      href={projectLink}
+    >
+      <div className=" w-full relative h-[calc(405/720*100cqw)]">
+        {mediaSrc === "" ? (
+          <></>
+        ) : mediaType === "image" ? (
+          <Image src={mediaSrc} alt={mediaSrc} fill className="object-cover" />
+        ) : (
+          <video
+            muted
+            playsInline
+            src={mediaSrc}
+            className="w-full h-full object-cover"
+          />
+        )}
+      </div>
+      <div
+        className="
                     py-4 
                     px-[clamp(16px,calc(((100cqw-460px)/260*32)+16px),48px)] 
                     h-[calc(3lh+16px)] 
@@ -56,16 +53,34 @@ const ProjectCard: FC<Props> = ({description,index,mediaSrc="",mediaType,project
                     @max-[460px]/project-card:flex-col
                     @max-[460px]/project-card:gap-4
                     @max-[460px]/project-card:relative
-                '
+                "
+      >
+        <HeadingThirdXl>{index}</HeadingThirdXl>
+        <div className="max-w-[465px] h-fit flex flex-wrap gap-2">
+          {languages?.map((language, i) => (
+            <span
+              key={i}
+              className="
+                                px-4 py-2 
+                                bg-gradient-to-r from-blue-500 to-purple-600
+                                text-white 
+                                text-sm 
+                                rounded-full 
+                                font-semibold
+                                shadow-md
+                                hover:shadow-lg
+                                transition-all duration-200
+                                hover:scale-105
+                                border border-white/20
+                            "
             >
-                 
-                <HeadingThirdXl>{index}</HeadingThirdXl>
-                <ParagraphBase className='max-w-[465px]'>
-                    {description}
-                </ParagraphBase>
+              {language}
+            </span>
+          ))}
+        </div>
 
-                <div 
-                    className='
+        <div
+          className="
                         
                         absolute 
                         right-0 
@@ -74,15 +89,13 @@ const ProjectCard: FC<Props> = ({description,index,mediaSrc="",mediaType,project
                         mt-[clamp(16px,calc(((100cqw-460px)/260*8)+16px),24px)] 
                         mr-[clamp(16px,calc(((100cqw-460px)/260*8)+16px),24px)]
                     
-                    '
-                >
-                    <Arrow className='@max-[460px]/project-card:text-black' />
-                </div>
-
-            </div>
-
-        </Link>
-    );
+                    "
+        >
+          <Arrow className="@max-[460px]/project-card:text-black" />
+        </div>
+      </div>
+    </Link>
+  );
 };
 
 export default ProjectCard;
