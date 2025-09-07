@@ -1,9 +1,17 @@
 import { openShareDialog } from "./windowOpen";
 
 
-export type SocialMediaNames = "facebook" | "facebookMessenger" | "whatsapp" | "line" | "linkedin" | "pinterest" | "reddit" | "telegram" | "tumblr" | "twitter";
+export type SocialMediaNames = "facebook" | "facebookMessenger" | "whatsapp" | "line" | "linkedin" | "pinterest" | "reddit" | "telegram" | "tumblr" | "twitter" | "github" | "mail";
 
 export interface ShareLinkParameters{
+    github: {
+        u: string,
+        quote?: string,
+    },
+    mail: {
+        u: string,
+        quote?: string,
+    },
     facebook: {
         u: string,
         quote?: string,

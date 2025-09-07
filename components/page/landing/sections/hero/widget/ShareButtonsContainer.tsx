@@ -1,7 +1,7 @@
 "use client"
 import CustomLandingAnimation from '@/components/utilities/animations/landing/CustomLandingAnimation';
-import FacebookShareButton from '@/components/utilities/buttons/FacebookShareButton';
-import TwitterShareButton from '@/components/utilities/buttons/TwitterShareButton';
+import GIthubShareButton from '@/components/utilities/buttons/GIthubShareButton';
+import MailShareButton from '@/components/utilities/buttons/MailShareButton';
 import UnderlineButton from '@/components/utilities/buttons/UnderlineButton';
 import SpacingLgContainer from '@/components/utilities/containers/SpacingLgContainer';
 import { landingContents } from '@/contents/landingContents';
@@ -49,11 +49,11 @@ const ShareButtonsContainer: FC = () => {
                     </UnderlineButton>
                 </Link>
                 <div className='flex gap-10'>
-                    <Link href={landingContents[lang].hero.contact.facebook}>
-                        <FacebookShareButton />
+                    <Link href={landingContents[lang].hero.contact.github}>
+                        <GIthubShareButton />
                     </Link>
-                    <Link href={landingContents[lang].hero.contact.twitter}>
-                        <TwitterShareButton  />
+                    <Link href={landingContents[lang].hero.contact.mail}>
+                        <MailShareButton />
                     </Link>
                 </div>
             </CustomLandingAnimation>

@@ -10,8 +10,8 @@ export type LandingContents = Record<SupportedLanguages, {
             videoSrc: string
         },
         contact: {
-            facebook: string,
-            twitter: string
+            github: string,
+            mail: string
         }
     },
     "what-i-do": {
@@ -115,13 +115,13 @@ export const landingContents: LandingContents = {
         hero: {
             headline: ["make it", "creative", "innovative"],
             headlineTypingSpeed: 140,
-            description: "I’m Ken, a web developer and designer who build modern, visually appealing and clean websites.",
+            description: "I’m Jon, fullstack developer & blockchain developer who build modern, visually appealing and clean websites.",
             backgroundVideo: {
                 videoSrc: "/assets/background.mp4"
             },
             contact: {
-                facebook: "https://m.me/ken32146",
-                twitter: "https://x.com/Ken_Tang_999"
+                github: "https://github.com/conka8",
+                mail: "mailto:jonas.keller122@gmail.com"
             }
         },
         "what-i-do": {
@@ -228,8 +228,8 @@ export const landingContents: LandingContents = {
                 videoSrc: "/assets/background.mp4"
             },
             contact: {
-                facebook: "https://m.me/ken32146",
-                twitter: "https://x.com/Ken_Tang_999"
+                github: "https://github.com/conka8",
+                mail: "mailto:jonas.keller122@gmail.com"
             }
         },
         "what-i-do": {
