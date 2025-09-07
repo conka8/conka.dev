@@ -1,7 +1,7 @@
 import { SupportedLanguages } from "./supportedLanguagesData"
 
 
-export type AboutContents = Record<SupportedLanguages,{
+export type AboutContents = Record<SupportedLanguages, {
     hero: {
         headline: string,
         subheading: string,
@@ -19,7 +19,7 @@ export const aboutContents: AboutContents = {
             imgSrc: "/assets/pexels-soheilkmp-27413969.jpg"
         },
     },
-    
+
     "zh": {
         hero: {
             headline: "Independent web developer based in hong kong",

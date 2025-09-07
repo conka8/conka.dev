@@ -1,7 +1,6 @@
 "use client"
 import { FC, useState } from 'react'
 import Logo from './widget/Logo';
-import LanguageToggle from './widget/LanguageToggle';
 import HamburgerMenu from './widget/HamburgerMenu';
 import NavMenu from './widget/NavMenu';
 import SpacingLgContainer from '../utilities/containers/SpacingLgContainer';

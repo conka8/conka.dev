@@ -115,7 +115,7 @@ export const landingContents: LandingContents = {
         hero: {
             headline: ["make it", "creative", "innovative"],
             headlineTypingSpeed: 140,
-            description: "I’m Jon, fullstack developer & blockchain developer who build modern, visually appealing and clean websites.",
+            description: "I’m Jon, fullstack & blockchain developer who build modern, visually appealing and clean websites.",
             backgroundVideo: {
                 videoSrc: "/assets/background.mp4"
             },
