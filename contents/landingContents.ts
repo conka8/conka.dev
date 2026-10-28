@@ -101,7 +101,7 @@ export const landingContents: LandingContents = {
         },
         "what-i-do": {
             heading: "What I do",
-            description: "I design, train and deploy AI—from fine-tuned models to agents that plan, use tools and get real work done.",
+            description: "I design, train and deploy AI, from fine-tuned models to agents that plan, use tools and get real work done.",
             "3d-hover-card": {
                 caption: "AI agent development",
                 imgSrc: "/assets/photos/agent-code-card.jpg"
@@ -123,7 +123,7 @@ export const landingContents: LandingContents = {
         },
         "projects": {
             heading: "Projects",
-            description: "Selected AI projects—from coding agents and voice agents to computer vision and distributed model training.",
+            description: "Selected AI projects, from coding agents and voice agents to computer vision and distributed model training.",
             projects: [
                 {
                     caption: "Software Engineering AI Agent",
@@ -157,11 +157,11 @@ export const landingContents: LandingContents = {
         },
         "services": {
             heading: "Services",
-            description: "I offer end-to-end AI services—from custom model development to autonomous agents that automate your workflows.",
+            description: "I offer end-to-end AI services, from custom model development to autonomous agents that automate your workflows.",
             services: [
                 {
                     caption: "AI Agent Development",
-                    description: "I build autonomous agents with tool use, memory and multi-step planning that automate real business workflows—reliably and safely."
+                    description: "I build autonomous agents with tool use, memory and multi-step planning that automate real business workflows reliably and safely."
                 },
                 {
                     caption: "Model Development & Fine-tuning",

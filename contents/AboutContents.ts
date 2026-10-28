@@ -15,7 +15,7 @@ export const aboutContents: AboutContents = {
         hero: {
             headline: "AI & machine learning developer based in Osaka, Japan",
             subheading: "I build AI models and autonomous agents that turn complex problems into reliable, production-ready systems.",
-            description: "As an AI developer, I work across the full lifecycle—data preparation, model training and fine-tuning, LLM integration and agent orchestration, through to deployment and monitoring. I care about AI that is not just impressive in a demo, but measurable, safe and dependable in production.",
+            description: "As an AI developer, I work across the full lifecycle: data preparation, model training and fine-tuning, LLM integration and agent orchestration, through to deployment and monitoring. I care about AI that is not just impressive in a demo, but measurable, safe and dependable in production.",
             imgSrc: "/assets/photos/about-workspace.jpg"
         },
     },
