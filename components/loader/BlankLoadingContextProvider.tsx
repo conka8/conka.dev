@@ -192,7 +192,7 @@ const BlankLoadingContextProvider: FC<Props> = ({children}) => {
                                 }
                             }}
                         >
-                            <HeadingEighthXl>Jonas Keller</HeadingEighthXl>
+                            <HeadingEighthXl>Yuma Ueda</HeadingEighthXl>
                         </motion.div>
                     )
                 }

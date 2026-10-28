@@ -23,7 +23,7 @@ const Showcase: FC = () => {
             "
     >
       {landingContents[lang]["projects"].projects.map(
-        ({ languages, videoSrc, caption, projectLink }, i) => {
+        ({ languages, videoSrc, caption, description, projectLink }, i) => {
           return (
             <div
               key={`project-${i}`}
@@ -63,6 +63,7 @@ const Showcase: FC = () => {
               >
                 <ProjectCard
                   projectLink={projectLink}
+                  description={description}
                   languages={languages}
                   index={`0${i + 1}.`}
                   mediaSrc={videoSrc}

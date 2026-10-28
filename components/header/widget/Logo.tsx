@@ -7,7 +7,7 @@ const Logo: FC = () => {
     return (
         <Link href="/">
             <span className='font-acumin-semi-cond text-2xl font-bold leading-0 tracking-[-0.03rem]'>
-                Jon.K
+                Yuma.U
             </span>
         </Link>
     );

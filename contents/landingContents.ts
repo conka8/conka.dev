@@ -39,38 +39,13 @@ export type LandingContents = Record<SupportedLanguages, {
     "projects": {
         heading: string,
         description: string,
-        projects: [
-            {
-                caption: string
-                videoSrc: string,
-                languages: string[],
-                projectLink: string
-            },
-            {
-                caption: string
-                videoSrc: string,
-                languages: string[],
-                projectLink: string
-            },
-            {
-                caption: string
-                videoSrc: string,
-                languages: string[],
-                projectLink: string
-            },
-            {
-                caption: string
-                videoSrc: string,
-                languages: string[],
-                projectLink: string
-            },
-            {
-                caption: string
-                videoSrc: string,
-                languages: string[],
-                projectLink: string
-            }
-        ],
+        projects: {
+            caption: string
+            description: string,
+            videoSrc: string,
+            languages: string[],
+            projectLink: string
+        }[],
     },
     "services": {
         heading: string,
@@ -113,94 +88,92 @@ export type LandingContents = Record<SupportedLanguages, {
 export const landingContents: LandingContents = {
     "en": {
         hero: {
-            headline: ["make it", "creative", "innovative"],
+            headline: ["make it", "intelligent", "autonomous"],
             headlineTypingSpeed: 140,
-            description: "I’m Jon, fullstack & blockchain developer who build modern, visually appealing and clean websites.",
+            description: "I’m Yuma, an AI developer building custom models and autonomous AI agents that solve real business problems.",
             backgroundVideo: {
                 videoSrc: "/assets/background.mp4"
             },
             contact: {
                 github: "https://github.com/conka8",
-                mail: "mailto:jonas.keller122@gmail.com"
+                mail: "mailto:yumaueda509@gmail.com"
             }
         },
         "what-i-do": {
-            heading: "What i do",
-            description: "I creates memorable websites with smooth animations and interactive experiences.",
+            heading: "What I do",
+            description: "I design, train and deploy AI—from fine-tuned models to agents that plan, use tools and get real work done.",
             "3d-hover-card": {
-                caption: "3D card hover effect",
-                imgSrc: "/assets/code2.png"
+                caption: "AI agent development",
+                imgSrc: "/assets/photos/agent-code-card.jpg"
             },
             "image-parallax": {
-                caption: "image hover parallax",
-                imgSrc: "/assets/pexels-leeloothefirst-7818239.jpg"
+                caption: "Model training & fine-tuning",
+                imgSrc: "/assets/photos/gpu-purple.jpg"
             },
             "parallax-scrolling": {
-                caption: "There are many more eye-catching techniques.",
-                description: "Parallax scrolling a trending web design technique to add depth and visual interest to the design. It creates a dynamic experience that keeps users engaged.",
-                imgSrcs: ["/assets/lennon-cheng-yAeUPmbyS-0-unsplash.jpg", "/assets/valentin-beauvais-yVUQlyRlJSw-unsplash.jpg", "/assets/joel-fulgencio-01fAtHwYqo0-unsplash.jpg"],
-                imgsCaptions: ["slow", "fast", "speedy"]
+                caption: "From raw data to deployed intelligence.",
+                description: "Every project follows a clear pipeline: understand the data, train and evaluate the model, then ship it behind a reliable API or agent workflow that keeps improving in production.",
+                imgSrcs: ["/assets/photos/network-cables.jpg", "/assets/photos/gpu-rig.jpg", "/assets/photos/server-rack.jpg"],
+                imgsCaptions: ["data", "train", "deploy"]
             }
         },
         "full-screen-transition": {
-            heading: ["Full screen", "transition"],
-            imgSrcs: ["/assets/pexels-cottonbro-8721339.jpg", "/assets/pexels-cottonbro-8721318.jpg"]
+            heading: ["From models", "to agents"],
+            imgSrcs: ["/assets/photos/code-ide.jpg", "/assets/photos/data-center.jpg"]
         },
         "projects": {
             heading: "Projects",
-            description: "I worked on these projects as both a developer and designer, writing code to build them while designing in Figma.",
+            description: "Selected AI projects—from coding agents and voice agents to computer vision and distributed model training.",
             projects: [
                 {
-                    caption: "Pump.fun Hotcurve",
-                    videoSrc: "/assets/projectThumbnail/project1.png",
-                    languages: ["Blockchain", "Ethereum"],
-                    projectLink: "https://www.hotcurves.fun/"
+                    caption: "Software Engineering AI Agent",
+                    description: "An autonomous coding agent that reads a repo, patches bugs and runs tests to verify its fixes.",
+                    videoSrc: "/assets/photos/projects/agent-code.jpg",
+                    languages: ["Python", "LLM Agents", "Tool Use", "Bittensor SN62"],
+                    projectLink: "https://github.com/conka8/sn62-agent"
                 },
                 {
-                    caption: "Pump.fun - PattiePump",
-                    videoSrc: "/assets/projectThumbnail/project2.png",
-                    languages: ["Blockchain", "Solana"],
-                    projectLink: "https://pattiepump.fun/"
+                    caption: "Cricket Ball Tracking",
+                    description: "A computer vision pipeline that detects and tracks the ball frame by frame in cricket footage.",
+                    videoSrc: "/assets/photos/projects/cricket-ball.jpg",
+                    languages: ["Python", "Computer Vision", "Object Detection", "Model Training"],
+                    projectLink: "https://github.com/conka8/cricket_ball_tracking"
                 },
                 {
-                    caption: "CatiCorn ICO(presale)",
-                    videoSrc: "/assets/projectThumbnail/project3.png",
-                    languages: ["Blockchain", "Solana"],
-                    projectLink: "https://www.catico.io/"
+                    caption: "Voice ReAct Agent",
+                    description: "A real-time voice assistant that reasons step by step and calls tools mid-conversation.",
+                    videoSrc: "/assets/photos/projects/studio-mic.jpg",
+                    languages: ["Python", "TypeScript", "OpenAI Realtime API", "LangChain"],
+                    projectLink: "https://github.com/conka8/Voice-ReAct-Agent"
                 },
                 {
-                    caption: "BotB",
-                    videoSrc: "/assets/projectThumbnail/project4.png",
-                    languages: ["Fullstack", "Ecommerce"],
-                    projectLink: "https://www.botb.com/"
-                },
-                {
-                    caption: "chinese text converter",
-                    videoSrc: "/assets/projectThumbnail/tools.jpg",
-                    languages: ["JavaScript", "Chrome Extension API", "HTML", "CSS"],
-                    projectLink: "https://chromewebstore.google.com/detail/%E6%96%87%E5%AD%97%E8%BD%89%E6%8F%9B%E5%B7%A5%E5%85%B7/efdjngbfhfhmambhgcfbnmpggjgfalpg?authuser=5&hl=zh-TW"
+                    caption: "Distributed MoE Training Dashboard",
+                    description: "A live leaderboard for a decentralized Mixture-of-Experts training network.",
+                    videoSrc: "/assets/photos/projects/moe-code.jpg",
+                    languages: ["React", "TypeScript", "Mixture of Experts", "Bittensor SN102"],
+                    projectLink: "https://github.com/conka8/connito"
                 }
             ],
         },
         "services": {
             heading: "Services",
-            description: "I offer a range of services focused on web solutions—whether it's brand building or work automation",
+            description: "I offer end-to-end AI services—from custom model development to autonomous agents that automate your workflows.",
             services: [
                 {
-                    caption: "Web Design",
-                    description: "I design clean, elegant, and user-friendly websites. interfaces that feel effortless while maintaining strong visual appeal."
+                    caption: "AI Agent Development",
+                    description: "I build autonomous agents with tool use, memory and multi-step planning that automate real business workflows—reliably and safely."
                 },
                 {
-                    caption: "Web Development",
-                    description: "I write clean, maintainable code using TypeScript and ESLint. With Next.js or React and Tailwind, I build reusable components for efficient development."
+                    caption: "Model Development & Fine-tuning",
+                    description: "I train and fine-tune models with PyTorch and Hugging Face, from LLM fine-tuning to custom classifiers, with rigorous evaluation before anything ships."
                 },
                 {
-                    caption: "Chrome extension Development",
-                    description: "Sometimes, you may need to perform repetitive tasks on certain websites. I'm here to automate your workflow and save you time."
+                    caption: "RAG & LLM Applications",
+                    description: "I connect LLMs to your own data with retrieval-augmented generation and vector databases, so answers stay accurate and grounded."
                 },
                 {
-                    caption: "Hosting & Cloudflare",
-                    description: "I can host your websites on all major hosting providers and set up Cloudflare to enhance speed and security."
+                    caption: "MLOps & Deployment",
+                    description: "I deploy models and agents as scalable APIs on cloud and GPU infrastructure, with monitoring, evaluation and cost optimization built in."
                 },
             ]
         },
@@ -209,7 +182,7 @@ export const landingContents: LandingContents = {
             contacts: [
                 {
                     type: "email",
-                    contact: "jonas.keller122@gmail.com"
+                    contact: "yumaueda509@gmail.com"
                 }],
             "hand-image-src": "/assets/hand.PNG"
         },
@@ -221,94 +194,92 @@ export const landingContents: LandingContents = {
 
     "zh": {
         hero: {
-            headline: ["就在這", "讓創意飛揚", "讓創新綻放"],
+            headline: ["就在這", "讓AI思考", "讓AI行動"],
             headlineTypingSpeed: 200,
-            description: "我是KEN, 一名網頁開發者和設計師, 專門製作現代化/簡潔/有質感的動態網頁。",
+            description: "我是Yuma, 一名AI開發者, 專門開發自訂模型和自主AI代理, 解決真實的業務問題。",
             backgroundVideo: {
                 videoSrc: "/assets/background.mp4"
             },
             contact: {
                 github: "https://github.com/conka8",
-                mail: "mailto:jonas.keller122@gmail.com"
+                mail: "mailto:yumaueda509@gmail.com"
             }
         },
         "what-i-do": {
             heading: "我做什麼的",
-            description: "我會用不同的動畫/互動元素, 來打造讓人難忘的體驗.",
+            description: "我設計、訓練並部署AI, 從微調模型到能夠規劃、使用工具並完成實際任務的智能代理.",
             "3d-hover-card": {
-                caption: "立體滑鼠懸停效果",
-                imgSrc: "/assets/code2.png"
+                caption: "AI代理開發",
+                imgSrc: "/assets/photos/agent-code-card.jpg"
             },
             "image-parallax": {
-                caption: "視差滑鼠懸停效果",
-                imgSrc: "/assets/pexels-leeloothefirst-7818239.jpg"
+                caption: "模型訓練與微調",
+                imgSrc: "/assets/photos/gpu-purple.jpg"
             },
             "parallax-scrolling": {
-                caption: "還有更多的動態效果,在等你發掘.",
-                description: "視差是一種流行的網頁技術, 可為設計增添深度和視覺趣味. 它創造出更動態體驗, 不再是平平無奇的文字和照片, 增加使用者留在網頁的時間.",
-                imgSrcs: ["/assets/lennon-cheng-yAeUPmbyS-0-unsplash.jpg", "/assets/valentin-beauvais-yVUQlyRlJSw-unsplash.jpg", "/assets/joel-fulgencio-01fAtHwYqo0-unsplash.jpg"],
-                imgsCaptions: ["慢速", "極快", "快速"]
+                caption: "從原始數據到已部署的智能.",
+                description: "每個項目都遵循清晰的流程: 理解數據, 訓練並評估模型, 然後透過可靠的API或代理工作流程上線, 並在生產環境中持續改進.",
+                imgSrcs: ["/assets/photos/network-cables.jpg", "/assets/photos/gpu-rig.jpg", "/assets/photos/server-rack.jpg"],
+                imgsCaptions: ["數據", "訓練", "部署"]
             }
         },
         "full-screen-transition": {
-            heading: ["全螢幕", "過渡動畫"],
-            imgSrcs: ["/assets/pexels-cottonbro-8721339.jpg", "/assets/pexels-cottonbro-8721318.jpg"]
+            heading: ["從模型", "到代理"],
+            imgSrcs: ["/assets/photos/code-ide.jpg", "/assets/photos/data-center.jpg"]
         },
         "projects": {
-            heading: "其他作品",
-            description: "這些是我過往的一些作品, 我在Figma設計, 然後寫代碼實現",
+            heading: "作品",
+            description: "精選AI項目, 涵蓋編程代理、語音代理、電腦視覺以及分散式模型訓練",
             projects: [
                 {
-                    caption: "歷史人物殿堂",
-                    videoSrc: "/assets/projectThumbnail/project1.png",
-                    languages: ["Next.js", "TypeScript", "Three.js", "Tailwind CSS", "GSAP"],
-                    projectLink: "https://hall.meisken.dev/"
+                    caption: "Software Engineering AI Agent",
+                    description: "能閱讀代碼庫、修復錯誤並執行測試驗證修改的自主編程代理.",
+                    videoSrc: "/assets/photos/projects/agent-code.jpg",
+                    languages: ["Python", "LLM Agents", "Tool Use", "Bittensor SN62"],
+                    projectLink: "https://github.com/conka8/sn62-agent"
                 },
                 {
-                    caption: "作品集 V1",
-                    videoSrc: "/assets/projectThumbnail/project3.png",
-                    languages: ["HTML", "CSS", "JavaScript", "GSAP"],
-                    projectLink: "https://portfolio.meisken.dev/"
+                    caption: "Cricket Ball Tracking",
+                    description: "在板球影片中逐幀偵測及追蹤球體的電腦視覺流程.",
+                    videoSrc: "/assets/photos/projects/cricket-ball.jpg",
+                    languages: ["Python", "Computer Vision", "Object Detection", "Model Training"],
+                    projectLink: "https://github.com/conka8/cricket_ball_tracking"
                 },
                 {
-                    caption: "How moons slow retreat earth",
-                    videoSrc: "/assets/projectThumbnail/project2.png",
-                    languages: ["HTML", "CSS", "JavaScript", "D3.js", "GSAP"],
-                    projectLink: "https://multimedia.scmp.com/native/infographics/article/3131059/how-moons-slow-retreat-earth/"
+                    caption: "Voice ReAct Agent",
+                    description: "能逐步推理, 並在對話中即時調用工具的實時語音助手.",
+                    videoSrc: "/assets/photos/projects/studio-mic.jpg",
+                    languages: ["Python", "TypeScript", "OpenAI Realtime API", "LangChain"],
+                    projectLink: "https://github.com/conka8/Voice-ReAct-Agent"
                 },
                 {
-                    caption: "待辦事項和日歷應用",
-                    videoSrc: "/assets/projectThumbnail/todo.jpg",
-                    languages: ["Next.js", "TypeScript", "Tailwind CSS", "Prisma", "PostgreSQL"],
-                    projectLink: "https://todo.meisken.dev/"
-                },
-                {
-                    caption: "文字轉換工具",
-                    videoSrc: "/assets/projectThumbnail/tools.jpg",
-                    languages: ["JavaScript", "Chrome Extension API", "HTML", "CSS"],
-                    projectLink: "https://chromewebstore.google.com/detail/%E6%96%87%E5%AD%97%E8%BD%89%E6%8F%9B%E5%B7%A5%E5%85%B7/efdjngbfhfhmambhgcfbnmpggjgfalpg?authuser=5&hl=zh-TW"
+                    caption: "Distributed MoE Training Dashboard",
+                    description: "去中心化混合專家 (MoE) 模型訓練網絡的實時排行榜.",
+                    videoSrc: "/assets/photos/projects/moe-code.jpg",
+                    languages: ["React", "TypeScript", "Mixture of Experts", "Bittensor SN102"],
+                    projectLink: "https://github.com/conka8/connito"
                 }
             ],
         },
         "services": {
             heading: "服務",
-            description: "我提供一系列服務, 主要以在網頁實現為主, 無論是品牌建設還是工作自動化.",
+            description: "我提供端到端的AI服務, 從自訂模型開發到能自動化工作流程的自主代理.",
             services: [
                 {
-                    caption: "網頁設計",
-                    description: "我設計簡潔、優雅且用户友好的網站和界面, 這些界面操作起來流暢, 同時具有視覺吸引力。"
+                    caption: "AI代理開發",
+                    description: "我開發具備工具調用、記憶和多步規劃能力的自主代理, 可靠且安全地自動化真實的業務流程."
                 },
                 {
-                    caption: "網頁開發",
-                    description: "我使用 TypeScript 和 ESLint 編寫整潔且易於維護的代碼, 利用 Next.js 或 React 結合 Tailwind, 我構建可複用組件以實現高效開發."
+                    caption: "模型開發與微調",
+                    description: "我使用 PyTorch 和 Hugging Face 訓練及微調模型, 從大型語言模型微調到自訂分類器, 並在上線前進行嚴格評估."
                 },
                 {
-                    caption: "Chrome擴充功能開發",
-                    description: "有時候, 你可能需要在某些網站上執行重複任務, 我在這裏幫助你自動化工作流程, 為你節省時間."
+                    caption: "RAG 與 LLM 應用",
+                    description: "我透過檢索增強生成 (RAG) 和向量數據庫, 把大型語言模型連接到你的數據, 讓回答準確且有根據."
                 },
                 {
-                    caption: "網頁託管和 Cloudflare",
-                    description: "我可以在所有主流的託管服務提供商上託管您的網站, 並設置 Cloudflare 來提升速度和安全性."
+                    caption: "MLOps 與部署",
+                    description: "我把模型和代理部署為可擴展的API, 運行於雲端和GPU基礎設施上, 並內建監控、評估和成本優化."
                 },
             ]
         },
@@ -317,7 +288,7 @@ export const landingContents: LandingContents = {
             contacts: [
                 {
                     type: "email",
-                    contact: "jonas.keller122@gmail.com"
+                    contact: "yumaueda509@gmail.com"
                 }
             ],
             "hand-image-src": "/assets/hand.PNG"

@@ -1,11 +1,11 @@
 import { Metadata } from "next";
 
 export const metadataTags: Metadata = {
-    title: "Jonas Keller's portfolio 2025",
-    description: "I am a web developer and designer who crafts dynamic websites that deliver interactive experiences far beyond mere static text and images.",
-    keywords: ["web developer","web designer","web development","parallax","scroll animation","animation","freelance","visual appeal","minimalist","landing page","portfolio", "interactive experiences", "smooth animations"],
-    publisher: "Jonas Keller",
-    authors: [{name: "Jonas Keller",url: "https://www.upwork.com/freelancers/~01698d1c0db877b32d"}],
+    title: "Yuma Ueda | AI Developer",
+    description: "Yuma Ueda is an AI developer in Osaka, Japan, specializing in custom model development, LLM fine-tuning and autonomous AI agents.",
+    keywords: ["AI developer","AI engineer","machine learning engineer","AI agent development","LLM","large language models","fine-tuning","RAG","model development","MLOps","PyTorch","Osaka","Japan","freelance","portfolio"],
+    publisher: "Yuma Ueda",
+    authors: [{name: "Yuma Ueda",url: "https://github.com/conka8"}],
     robots:"index, follow",
     icons: {
         icon: "/assets/icon.png",
@@ -26,10 +26,10 @@ export const metadataTags: Metadata = {
     category: 'portfolio',
     metadataBase: new URL('https://www.meisken.dev'),
     openGraph: {
-        siteName: "Jonas Keller's portfolio 2025",
+        siteName: "Yuma Ueda | AI Developer",
         type: "website",
-        title: "Jonas Keller's portfolio 2025",
-        description: 'I am a web developer and designer who crafts dynamic websites that deliver interactive experiences far beyond mere static text and images.',
+        title: "Yuma Ueda | AI Developer",
+        description: 'Yuma Ueda is an AI developer in Osaka, Japan, specializing in custom model development, LLM fine-tuning and autonomous AI agents.',
         images: [{
             url: "/assets/thumbnail.png",
             type: "image/png",
@@ -37,16 +37,15 @@ export const metadataTags: Metadata = {
             height: "1080",
         }],
         url: "https://www.meisken.dev",
-        locale: "Hong Kong",
-        emails: "jonas.keller122@gmail.com",
-        phoneNumbers: "+85292053876",
+        locale: "Osaka, Japan",
+        emails: "yumaueda509@gmail.com",
     },
     twitter: {
-        site: "@Jonas Keller",
-        creator: "@Jonas Keller",
+        site: "@Yuma Ueda",
+        creator: "@Yuma Ueda",
         card: 'summary_large_image',
-        title: "Jonas Keller's portfolio 2025",
-        description: "I am a web developer and designer who crafts dynamic websites that deliver interactive experiences far beyond mere static text and images.",
+        title: "Yuma Ueda | AI Developer",
+        description: "Yuma Ueda is an AI developer in Osaka, Japan, specializing in custom model development, LLM fine-tuning and autonomous AI agents.",
         images: "/assets/thumbnail.png",
     }
 };

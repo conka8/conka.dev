@@ -3,9 +3,11 @@ import HeadingThirdXl from "../headings/HeadingThirdXl";
 import Image from "next/image";
 import Arrow from "../svg/Arrow";
 import Link from "next/link";
+import ParagraphBase from "../paragraphs/ParagraphBase";
 
 interface Props {
   index?: string;
+  description?: string;
   languages?: string[];
   mediaSrc?: string;
   mediaType?: "image" | "video";
@@ -15,6 +17,7 @@ interface Props {
 const ProjectCard: FC<Props> = ({
   languages,
   index,
+  description,
   mediaSrc = "",
   mediaType,
   projectLink,
@@ -42,7 +45,7 @@ const ProjectCard: FC<Props> = ({
         className="
                     py-4 
                     px-[clamp(16px,calc(((100cqw-460px)/260*32)+16px),48px)] 
-                    h-[calc(3lh+16px)] 
+                    min-h-[calc(3lh+16px)]
                     
                     flex 
                     gap-[clamp(28px,calc(((100cqw-460px)/260*12)+28px),40px)] 
@@ -56,27 +59,25 @@ const ProjectCard: FC<Props> = ({
                 "
       >
         <HeadingThirdXl>{index}</HeadingThirdXl>
-        <div className="max-w-[465px] h-fit flex flex-wrap gap-2">
-          {languages?.map((language, i) => (
-            <span
-              key={i}
-              className="
-                                px-4 py-2 
-                                bg-gradient-to-r from-blue-500 to-purple-600
-                                text-white 
-                                text-sm 
-                                rounded-full 
-                                font-semibold
-                                shadow-md
-                                hover:shadow-lg
-                                transition-all duration-200
-                                hover:scale-105
-                                border border-white/20
-                            "
-            >
-              {language}
-            </span>
-          ))}
+        <div className="max-w-[465px] h-fit flex flex-col gap-3">
+          <ParagraphBase className="leading-[1.3]">{description}</ParagraphBase>
+          <div className="flex flex-wrap gap-2">
+            {languages?.map((language, i) => (
+              <span
+                key={i}
+                className="
+                                  px-3 py-1
+                                  border border-black/25
+                                  text-black/70
+                                  text-xs
+                                  rounded-full
+                                  tracking-wide
+                              "
+              >
+                {language}
+              </span>
+            ))}
+          </div>
         </div>
 
         <div
